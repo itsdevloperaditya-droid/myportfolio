@@ -10,9 +10,11 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent; /* Removes the blue highlight on mobile */
     }
 
     body {
+      user-select: none; /* Optional: adds more of a 'native app' feel */
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #0f3460 100%);
       color: #ffffff;
@@ -505,7 +507,7 @@
 
     <!-- HEADER: Enhanced 3D Intro -->
     <div class="intro">
-      <h1>Aditya Mishra</h1>
+      <h1>DEMO PROJECT DESIGNS</h1>
       <div class="name-badge">
         <span class="chip">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -514,18 +516,18 @@
             <path d="M8 12h8" />
             <path d="M10 16h4" />
           </svg>
-          full‑stack developer
+          Aditya Mishra -  A full‑stack Web developer
         </span>
         <span class="chip">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
             <path d="M12 6v6l4 2"/>
           </svg>
-          6+ demos ready
+          Modern designs
         </span>
       </div>
       <div class="headline">
-        ⚡ pre‑built business demos — orbit into the future of design
+        ⚡ pre‑built business Design demos
       </div>
     </div>
 
@@ -554,14 +556,6 @@
             </svg>
           </div>
           <h3>💪 Gym & Fitness</h3>
-          <div class="demo-url">
-            <svg viewBox="0 0 24 24" stroke="currentColor">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span>gym-demo.aditya.dev</span>
-          </div>
         </label>
         <div class="demo-btns-wrapper">
           <a href="https://gymdemo1-xi.vercel.app/" class="demo-btn" target="_blank">Demo 1</a>
@@ -583,14 +577,6 @@
             </svg>
           </div>
           <h3>🍽️ Restaurant</h3>
-          <div class="demo-url">
-            <svg viewBox="0 0 24 24" stroke="currentColor">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span>resto-demo.aditya.dev</span>
-          </div>
         </label>
         <div class="demo-btns-wrapper">
           <a href="https://restaurantdemo1-eta.vercel.app/" class="demo-btn" target="_blank">Demo 1</a>
@@ -612,14 +598,6 @@
             </svg>
           </div>
           <h3>📚 Coaching</h3>
-          <div class="demo-url">
-            <svg viewBox="0 0 24 24" stroke="currentColor">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span>coach-demo.aditya.dev</span>
-          </div>
         </label>
         <div class="demo-btns-wrapper">
           <a href="https://coachingdemo1.vercel.app/" class="demo-btn" target="_blank">Demo 1</a>
@@ -638,11 +616,11 @@
           <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
           <line x1="12" y1="18" x2="12" y2="18" stroke-width="3" />
         </svg>
-        call or text — let's start with a demo
+        call or text — let's Make your own bussiness website!
       </p>
-      <div class="phone-badge">
+      <a href="https://wa.me/919608588361" target="_blank" class="phone-badge" style="text-decoration: none;">
         📞 +91 9608588361 - CALL FOR FREE DEMO
-      </div>
+      </a>
     </div>
 
     <!-- Enhanced 3D Footer -->
@@ -659,5 +637,15 @@
 
     <!-- Note: All URLs are placeholders; replace as needed. Pure CSS 3D magic! -->
   </div>
+
+  <script>
+    // Add haptic feedback (vibration) for a real app feel
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('a, .demo-btn, .phone-badge, .card-label, input[type="checkbox"]');
+      if (target && navigator.vibrate) {
+        navigator.vibrate(40); // Short 40ms vibration
+      }
+    });
+  </script>
 </body>
 </html>
